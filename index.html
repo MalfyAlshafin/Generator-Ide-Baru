@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Ide Baru</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons for modern minimal icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="ph-fill ph-lightbulb"></i>
+            <span>Ide Generator</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#" id="view-favorites-btn">Favorit</a>
+        </nav>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+            <i class="ph ph-sun"></i>
+        </button>
+    </header>
+
+    <main class="main-container">
+        <div class="hero-section">
+            <h1 class="main-title">Cari Inspirasimu</h1>
+            <p class="subtitle">Temukan ide segar dan unik untuk hari ini.</p>
+        </div>
+
+        <div class="category-filter">
+            <label for="category-select">Eksplorasi:</label>
+            <div class="custom-select-wrapper">
+                <select id="category-select">
+                    <option value="Semua">Semua Ide</option>
+                    <option value="Bisnis">Ide Bisnis</option>
+                    <option value="Kreatif">Proyek Kreatif</option>
+                    <option value="Konten">Kreator Konten</option>
+                </select>
+                <i class="ph ph-caret-down" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--text-main);"></i>
+            </div>
+        </div>
+
+        <div class="idea-card">
+            <span id="idea-category-badge" class="badge">Kreatif</span>
+            
+            <div class="idea-content">
+                <h2 id="idea-text" class="idea-text">"Buatlah aplikasi mobile yang mengingatkan pengguna untuk minum air setiap kali mereka membuka media sosial."</h2>
+            </div>
+            
+            <div class="card-actions">
+                <button id="btn-favorite" class="action-btn" aria-label="Save to Favorites">
+                    <i class="ph ph-heart"></i>
+                    <span>Simpan</span>
+                </button>
+                <button id="btn-copy" class="action-btn" aria-label="Copy Idea">
+                    <i class="ph ph-copy"></i>
+                    <span>Salin</span>
+                </button>
+                <button id="btn-share" class="action-btn" aria-label="Share Idea">
+                    <i class="ph ph-share-network"></i>
+                    <span>Bagikan</span>
+                </button>
+            </div>
+        </div>
+
+        <button id="btn-generate" class="generate-btn">
+            <i class="ph ph-sparkle"></i>
+            TEMUKAN IDE BARU
+        </button>
+    </main>
+
+    <!-- Favorites Modal -->
+    <div id="favorites-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header" style="display: flex; justify-content: space-between; padding: 1.5rem; border-bottom: 1px solid var(--glass-border);">
+                <h2>Ide Tersimpan</h2>
+                <button id="close-modal" class="icon-btn" style="width: 35px; height: 35px;"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="modal-body" style="padding: 1.5rem; max-height: 60vh; overflow-y: auto;">
+                <div id="favorites-list" class="favorites-list">
+                    <!-- Favorite items will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Notifikasi</div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Generator Ideas.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/malshaf_/" target="_blank"><i class="ph ph-instagram-logo"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
